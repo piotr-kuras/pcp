@@ -10,10 +10,8 @@
 - **Autorzy:**
     Piotr Kuras, Paweł Brunke, Grzegorz Hintz
 - **Warunki licencyjne do oprogramowania wytworzonego przez grupę:**
-    - Licencja Open Source
-        - Otwarte oprogramowanie, zezwala na darmowe użytkowanie, kopiowanie, rozpowszechnianie i modyfikowanie.
-    - Creative Commons Zero
-        - Dzieło jest w domenie publicznej, umożliwia dowolne kopiowanie i modyfikowanie bez konieczności przypisywania autora.
+    - **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**
+        - Darmowe użytkowanie, kopiowanie, rozpowszechnianie i modyfikowanie oprogramowania są dozwolone pod warunkiem przypisania odpowiedniego uznanie autorstwa, braku użycia komercyjnego oraz udostępnienia utworów pochodnych na tych samych warunkach.
 
 ### 3. Specyfikacja wymagań:
 
