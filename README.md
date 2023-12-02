@@ -37,8 +37,8 @@
     - Bootstrap
     - ...
 - **Architektura uruchomieniowa – stos technologiczny:**
-    - Docker Compose Build
-    - Docker Compose Up
+    - `docker compose build`
+    - `docker compose up`
 
 ### 5. Testy:
 
