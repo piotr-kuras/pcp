@@ -7,3 +7,15 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
+  redis:
+    image: redis:alpine
+  celery_worker:
+    restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: python -m celery -A pcp_project worker --beat --scheduler django -l info
+    volumes:
+      - ./:/code
+    depends_on:
+      - redis

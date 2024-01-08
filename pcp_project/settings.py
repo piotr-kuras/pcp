@@ -25,10 +25,8 @@ SECRET_KEY = "django-insecure-fbf@luruov3l6^8xta!^g83u484@j&!#s5ul)$z_dg*-!=ndx_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
-
-# Application definition
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -37,11 +35,16 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "pcp",
+    "celery",
+    "django_celery_results",
+    "django_celery_beat",
     "crispy_forms",
     "crispy_bootstrap5",
     "accounts",
-    "pcp",
 ]
+# Application definition
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -133,3 +136,25 @@ LOGOUT_REDIRECT_URL = "home"
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# CELERY SETTINGS
+
+CELERY_BROKER_URL = "redis://redis:6379"
+CELERY_RESULT_BACKEND = "redis://redis:6379"
+CELERY_TIMEZONE = "Europe/Warsaw"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+
+# CELERY BEAT SCHEDULE
+
+# from celery.schedules import crontab
+#
+# import pcp_project.tasks
+#
+# CELERY_BEAT_SCHEDULE = {
+#     "refresh_products_prices": {
+#         "task": "pcp_projects.refresh_products_prices",
+#         "schedule": crontab(minute=0, hour=10),
+#         # "schedule": crontab(minute="*/1"),
+#     },
+# }
