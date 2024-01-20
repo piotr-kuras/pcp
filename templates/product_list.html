@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Products{% endblock title %}
+{% block content %}
+{% for product in product_list %}
+{% if product.added_by.pk == request.user.pk %}
+<div class="card">
+<div class="card-header">
+<a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+</div>
+<div class="card-footer text-center text-muted">
+<a href="{% url 'product_edit' product.pk %}">Edytuj</a>
+<a href="{% url 'product_delete' product.pk %}">Usuń Produkt</a>
+</div>
+</div>
+<br />
+{% endif %}
+{% endfor %}
+{% endblock content %}

@@ -3,7 +3,7 @@
 - **Nazwa skrócona:** PCP
 - **Nazwa pełna:** Porównywarka Cen Produktów
 - **Krótki opis ze wskazaniem celów:**
-    Projekt Porównywarki Cen Produktów to narzędzie online, które umożliwia użytkownikom szybkie i skuteczne porównanie cen części produktów z wybranych witryn internetowych. Działa poprzez regularne skanowanie wybranych platform zakupowych w celu zbierania informacji o aktualnych cenach produktów. System następnie prezentuje te dane w przejrzysty sposób, umożliwiając konsumentom znalezienie najkorzystniejszych ofert.
+    Projekt Porównywarki Cen Produktów to narzędzie online, które umożliwia użytkownikom szybkie i skuteczne porównanie cen produktów. Działa poprzez regularne skanowanie wybranych platform zakupowych w celu zbierania informacji o aktualnych cenach produktów. System następnie prezentuje te dane w przejrzysty sposób, umożliwiając konsumentom znalezienie najkorzystniejszych ofert.
 
 ### 2. Prawa autorskie:
 
@@ -33,7 +33,9 @@
     - Beautiful Soup
     - Requests
     - Bootstrap
-    - ...
+    - Pandas
+    - Celery
+    - Plotly
 - **Architektura uruchomieniowa – stos technologiczny:**
     - `docker compose build`
     - `docker compose up`
@@ -42,12 +44,14 @@
 
 #### a. Scenariusz testów:
 
-1. Zarejestrowane się na stronę, logowanie się na błędne dane do logowania.
-2. Zarejestrowane się na stronę, logowanie się na poprawne dane do logowania, wpisanie błędnego linku produktu.
-3. Zarejestrowane się na stronę, logowanie się na poprawne dane do logowania, wpisanie linku produktu z nieobsługiwanego sklepu.
-4. Zarejestrowane się na stronę, logowanie się na poprawne dane do logowania, wpisanie poprawnego linku produktu z obsługiwanego sklepu, zaobserwowanie zmian.
+1. Zarejestrowane się na stronę, logowanie się na błędne dane do logowania. 
+2. Dodanie nowego przedmiotu do listy
+3. Usunięcie przedmiotu z listy
+4. Wylogowanie się z aplikacji
 
 #### b. Sprawozdanie z wykonania scenariuszy testów:
 
-Raport w Excelu
-
+- [x] 1
+- [x] 2
+- [x] 3
+- [x] 4

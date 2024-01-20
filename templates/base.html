@@ -12,7 +12,7 @@
           mb-md-0">
         {% if user.is_authenticated %}
     <li>
-      <a href="#" class="nav-link px-2 link-dark">+ New</a>
+      <a href="{% url 'product_new' %}" class="nav-link px-2 link-dark text-primary">➕ Dodaj nowy produkt</a>
     </li>
   </ul>
   <div class="dropdown text-end">
@@ -20,15 +20,15 @@
             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
   {{ user.username }} </a>
   <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-    <li><a class="dropdown-item" href="{% url 'password_change' %}"> Change password</a></li>
-    <li><a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
+    <li><a class="dropdown-item" href="{% url 'password_change' %}"> Zmień hasło</a></li>
+    <li><a class="dropdown-item" href="{% url 'logout' %}">Wyloguj</a></li>
   </ul>
   </div>
   {% else %}  
   </ul>
   <div class="text-end">
-    <a href="{% url 'login' %}" class="btn btn-outline-primary me-2"> Log In</a>
-    <a href="{% url 'signup' %}" class="btn btn-primary">Sign Up</a>
+    <a href="{% url 'login' %}" class="btn btn-outline-primary me-2">Zaloguj się</a>
+    <a href="{% url 'signup' %}" class="btn btn-primary">Dołącz do nas!</a>
   </div>
   {% endif %}
   </div>

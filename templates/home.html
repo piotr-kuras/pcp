@@ -1,10 +1,12 @@
+<!-- templates/home.html -->
 {% extends "base.html" %}
 {% block title %}Home{% endblock title %}
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}! You are {{ user.age }} years old.
-<p><a href="{% url 'logout' %}">Log Out</a></p> {% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a> | <a href="{% url 'signup' %}">Sign Up</a>
-{% endif %}
+Cześć, {{ user.username }}!
+<p><a href="{% url 'logout' %}">Wyloguj</a></p>
+<p><a class="btn btn-primary btn-lg" href="{% url 'product_list' %}" role="button">
+Zobacz dodane produkty</a></p>{% else %}
+<p>Nie jesteś zalogowany</p>
+<a href="{% url 'login' %}">Log In</a> | <a href="{% url 'signup' %}">Dołącz do nas!</a> {% endif %}
 {% endblock content %}
